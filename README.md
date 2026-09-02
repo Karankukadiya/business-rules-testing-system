@@ -14,7 +14,6 @@ SQL validation queries and automated Pytest tests.
 | ![Dashboard](docs/screenshots/01-dashboard.png) | ![Validation error](docs/screenshots/02-validation-error-add.png) |
 | ![Rule validation](docs/screenshots/06-rule-validation-fail.png) | ![SQL reference](docs/screenshots/08-sql-reference.png) |
 | ![Test suite](docs/screenshots/10-excel-test-suite.png) | ![Test summary](docs/screenshots/13-test-summary.png) |
-| ![DB Browser](docs/screenshots/14-db-browser-sql.png) | ![Pytest](docs/screenshots/15-pytest-passing.png) |
 
 More images and the full checklist: `docs/screenshots/README.md`.
 
@@ -133,13 +132,6 @@ string processing. It is deterministic and **template-based, not a generative AI
 - Summary workbook copies statuses when generated; re-run `--summary` (or the app button) after updating the suite.
 - Regenerating through the app shows formulas that compute when opened in Excel.
 - Future-date rule (BR-07) is not a database CHECK (SQLite limitation).
-
-## Interview talking points
-- Turned 12 business rules into 40 traceable test cases (positive, negative, boundary, duplicate, CRUD, regression).
-- Used boundary value analysis (ages 17/18/60/61, salaries 0, 0.01, 200000, 200001).
-- Verified data at the database level with SQL; designed defensively with parameterised queries and constraints.
-- Wrote a requirements traceability matrix and defect log with severity/priority.
-- Automated rule checks with Pytest using isolated databases; kept manual results honest (Not Executed).
 
 ## License
 MIT - see `LICENSE`.
